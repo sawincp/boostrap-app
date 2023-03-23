@@ -1,11 +1,23 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, {useState, useEffect} from "react";
 
 const CharacterContainer =() =>{
 
-    
+    const [characters, setCharactes]=useState([])
+
+    useEffect(()=>{
+        fetch('https://rickandmortyapi.com/api/character')
+            .then(r => r.json())
+            .then(data => setCharactes(data))
+    }, [])
+
+
     return(
-        <Container></Container>
+        <div className="CharacterContainer"> 
+
+            <CharacterList characters={characters}/>
+        
+        </div>
+
         
 
     )
