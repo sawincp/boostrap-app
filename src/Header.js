@@ -14,7 +14,6 @@ const Header =()=>{
           <h1>Rick and Morty API</h1>
         </div>
       </div>
-
     </Container>
 
     )    
