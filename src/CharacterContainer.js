@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import CharacterList from "./CharacterList"
 
 const CharacterContainer =() =>{
 
@@ -7,7 +8,7 @@ const CharacterContainer =() =>{
     useEffect(()=>{
         fetch('https://rickandmortyapi.com/api/character')
             .then(r => r.json())
-            .then(data => setCharactes(data))
+            .then(data => setCharactes(data.results))
     }, [])
 
 
