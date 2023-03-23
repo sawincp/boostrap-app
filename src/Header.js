@@ -1,24 +1,21 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const Header =()=>{
 
     const image = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjoVTwHIWdX0Uqhzu_G4VLVg6l1Fj0SziEKd19N8xmBI-6ACLqR65tEKYx-gfn810x4s4&usqp=CAU"
 
-    const cardStyle ={
-        textAlign: "center",
-
-    }
 
     return(
-        <Card className="Card">
-            <Card.Img style={{height: "500px"}} src ={image} alt="rick and morty"/>
-            <Card.ImgOverlay className="d-flex align-items-center text-center">
-                <Card.Title style={cardStyle}>
-                    <h1>Rick and Morty API</h1>
-                </Card.Title>
-            </Card.ImgOverlay>
-        </Card>
+    <Container className="d-flex align-items-center justify-content-center ">
+      <div className="position-relative">
+        <img src={image} alt="Rick and Morty" className="w-100" />
+        <div className=" justify-content-center">
+          <h1>Rick and Morty API</h1>
+        </div>
+      </div>
+
+    </Container>
 
     )    
 
